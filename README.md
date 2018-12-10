@@ -1,4 +1,4 @@
-# EXAM2README
+#READMEEXAMII
 Problem 1:
 LONGEST PALINDROMIC SUBSTRING
 Given a string s, find the longest palindromic substring in s.
@@ -12,7 +12,7 @@ Does the string have to be a valid palindrome to have a substring palindrome?
 I:	The problem consists of finding the substring palindrome within a string. Implications such as the string’s length could be an issue for time complexity due to approaches such as brute force.
 D:	For a solution I would want to have good time complexity, and a good pattern that will be effective for every string despite its length.
 E: 	First to reduce time complexity we could take in consideration centering the sub palindrome down the middle of the string since it mirrors at its center. Centering the sub palindrome would read the string from both sides at the same time checking for symmetry, cutting the time to read the string.
-A:	S
+A:	Th algorithm is design to check the size at both ends of the word, if the string isn’t the exact same length from left to right with one extra variable in the middle then it won’t scan the string even if it has a sub palindrome somewhere inside the string.
 L:	The algorithm is a decent approach, because it is not using brute force and the strategy to check the valid string from both ends tackles the issue of longer palindromes. Also verifying that the palindrome is valid first avoids strange inputs such as “xxabaxy” that might have a sub palindrome but isn’t considered a palindrome.	
 
 DUKES -7- STEPS:
@@ -123,12 +123,12 @@ A:	A possible issue could be that the algorithm works for single digit integers 
 L:	What I learned is that it becomes harder trying to compare numbers that are double digits with single digits as they have a different value and it messes with the resulting format. 
 
 DUKES -7- STEPS:
-STEP 1: 
-STEP 2:
-STEP 3:
-STEP 4/STEP 5:
-STEP 6:
-STEP 7:
+STEP 1: Taking in consideration an array of integers [3, 30, 34, 5, 9] the output should come out to an ordered combination of “9534330” in string format, without separating integers larger than two digits.
+STEP 2: We cannot approach the integers by simply sorting them in descending number, but we must first convert them to strings and then sort the numbers, and this will result the issue of the double digits having a low leading number in comparison to a larger single digit integer.
+STEP 3: The pattern consists of checking all the integers and placing them in the according descending order, taking in consideration the leading coefficient of paired integers.
+STEP 4/STEP 5: The program takes the array of integers and converts the numbers into string focusing in the leading coefficient of paired numbers, in terms of generality it splits the double-digit integers and compares them in regular and reverse order. If the list is empty it returns a zero and if it isn’t it adds the integers into the largest number format.
+STEP 6: Test Case: [8, 43, 5, 9] -> “98543”
+STEP 7: Failed Test Case: Invalid array of integers
 
 Problem 7:
 LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS
@@ -184,15 +184,15 @@ I:	The problem is that a duplicated number should be returned, so the algorithm 
 D:	The goal is to implement an algorithm that will read through the array list quick and allocate the duplicated variable without going through the whole list.
 E: 	A strategy could be to sort the array list to facilitate the reading of the string, so if one duplicated number is found the other duplicate will be adjacent to the number.
 A:	Possible cases could be that the array list is long and the step to reorder the list in ascending order harms the time complexity if the duplicated integer is at the end of the array list.
-L:	The solution implemented proves that with a good approach there could also be a huge issue if the right case is given, such that in the best-case scenario we fin =d the duplicated integer at the beginning and the worst case we find it until the end.
+L:	The solution implemented proves that with a good approach there could also be a huge issue if the right case is given, such that in the best-case scenario we find the duplicated integer at the beginning and the worst case we find it until the end.
 
 DUKES -7- STEPS:
-STEP 1: 
-STEP 2:
-STEP 3:
-STEP 4/STEP 5:
-STEP 6:
-STEP 7:
+STEP 1: Given an array of integers [2, 4, 6, 7, 1, 1, 3], assuming that there is a duplicate number the algorithm should scan the array and return the duplicate number, in this case the number is 1.
+STEP 2: The steps taken to solve this problem started by ordering the array of integers in ascending order then doing a linear scan going one by one comparing the numbers to each other adjacently to then return the duplicate number.
+STEP 3: A pattern here is that if the list of integers is sorted either ascending or descending order the duplicate numbers will be side by side, and this will facilitate finding the duplicates which might have been originally scattered within the array. 
+STEP 4/STEP 5: For the program the array of integers is taken as the main parameter, then initializing a sorting algorithm to sort the array in ascending order. After an integer I is initialized to serve as the index location and is incremented accordingly while it remains under the length of the array, then we take the array of integers considering the index location and compare that they’re equal and if they are the value is returned.
+STEP 6: Test Case: [3, 5, 7, 3, 2] -> [2, 3, 3, 5, 7] -> 3
+STEP 7: Failed Test Case: [1, 0, 4, 6, 3] -> [0, 1, 3, 4, 6] -> No duplicate
 
 Problem 10:
 REMOVE Nth NODE FROM THE END OF LIST
@@ -208,12 +208,12 @@ A:	An anticipated issue is that of time, the algorithm works efficiently when th
 L: 	The approach implemented had steps that could have been removed, the algorithm consisted of a two-step process when it is possible to solve in one pass, as having more passes through the list of nodes increases the time complexity.
 
 DUKES -7- STEPS:
-STEP 1: 
-STEP 2:
-STEP 3:
-STEP 4/STEP 5:
-STEP 6:
-STEP 7:
+STEP 1: Given linked list of integers 1 -> 2 -> 3 -> 4 -> 5 with a target that n = 2 that is the node that must be removed from the end, the program should return 1 -> 2 -> 3 -> 5, with the second to last node containing the integer 4 is removed and relinked.
+STEP 2: A way to approach the problem is to first find the length of the original linked list to localize the node that must be removed from the end, after the algorithm must implement a dummy linked list that connects to the original head and tracks the node the must be removed locating it, deleting it, and re linking the previous node to the next node.
+STEP 3: The patterns of the algorithm include scanning the for the length as every .next node is an increment into the length size, another pattern is the path that the dummy follows to scan and delete the given target node.
+STEP 4/STEP 5: The program follows a two-pass algorithm, taking as main parameters the list of nodes ant the integer target that represents the index location of the node.  The code then initializes a new dummy node and redirects it to the head of the original list of nodes, checks whether the list is empty and if it’s not, it proceeds to scan, remove, and relink the path ways from the removed target from the end of the list.
+STEP 6: Test Case: 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> null [TARGET : 3] 0 -> 1 -> 2 -> 3 -> 4 -> 6 -> 7 -> null
+STEP 7: Failed Test Case: A linked list of multiple lists combined
 
 Problem 11:
 BINARY TREE INORDER TRAVERSAL
@@ -229,12 +229,12 @@ A:	Anticipated results, the tree is in nature recursive and so using a recursive
 L:	Since trees pair well with recursive algorithms, I would say that trying to reorder any tree in any form and returning it isn’t a difficult task when paired with a well implemented recursive method.
 
 DUKES -7- STEPS:
-STEP 1: 
-STEP 2:
-STEP 3:
-STEP 4/STEP 5:
-STEP 6:
-STEP 7:
+STEP 1: Given a tree [1, null, 2, 3] that is originally in the order of root, left, right, the program must return the order in traversal form meaning right, root, left and so the output would be [1, 3, 2].
+STEP 2: The algorithm will scan the tree recursively and with a helper tool it will adjust the traversal format, by placing the right node then the root node then the left node, in order.
+STEP 3: Patters include the adding of a node, when it is not equal to null, to the correct format as it checks recursively for right and left.
+STEP 4/STEP 5: The program takes the tree of nodes as the main parameter then initializing an array list that will contain the contents of the nodes in an array format. A helper tool is initialized that will return and place the correct format from other recursive methods checking the right and left side of the tree. The methods will include checking whether the left and right nodes are empty and if not, it will add then in traversal order the array list. 
+STEP 6: Test Case: [3, 5, 7, 2] ORIGINAL -> [5, 3, 7, 2] TRAVERSAL
+STEP 7: Failed Test Case:  [null] -> poor test case doesn’t allow us to check the correct format
 
 Problem 12:
 SHUFFLE AN ARRAY
@@ -249,12 +249,12 @@ A:	Anticipated issues, if we implement a reset method that is executed towards t
 L:	It is important to consider all aspects of the code, major issues such as resetting a set of data can be a disaster when dealing with big and important quantities of data, as it is hard and nearly impossible to reproduce without backed up information. 
 
 DUKES -7- STEPS:
-STEP 1: 
-STEP 2:
-STEP 3:
-STEP 4/STEP 5:
-STEP 6:
-STEP 7:
+STEP 1: Given an array of integers [4, 5, 7] the program should reshuffle the contents of the array into a new order of the integers. For example, we would take the original and return another possible format of [5, 4, 7].
+STEP 2: The contents of the original array will be copied into the contents of a dummy array from which the integers of the original array will be drawn at random, resetting the original array and returning a new order of the integers into the array.
+STEP 3: Patterns within the algorithm include tracing the contents of the array placing the into a dummy array and returning them.
+STEP 4/STEP 5: The program initializes the original array and a dummy array, as well as it keeps a copy of the original array because if a reset function is used on the original array to replace its original contents in a new order, the original order will be lost. Then an integer i will be initialized to scan through the array integers and place them into the dummy array, the contents will be shuffled, the original array will be reset, and the contents will then be placed back into the original array removing them from the dummy array one by one.
+STEP 6: Test Case: [5, 7, 1, 3, 9] -> [7, 9, 3 ,1, 5]
+STEP 7: Failed Test Case: [5, 5, 5, 5, 5] This case doesn’t allow the programmer to see the shuffle since all the numbers are the same.
 
 Problem 13:
 TARGET SUM
@@ -270,11 +270,14 @@ A:	An issue with this approach will be the memory affecting the time complexity 
 L:	Although this approach is better than the brute force attempts to try all the possible combinations of symbols with integers, it is important to consider that there are better methods and options such as Dynamic Programming which optimize the solution.
 
 DUKES -7- STEPS:
-STEP 1: 
-STEP 2:
-STEP 3:
-STEP 4/STEP 5:
-STEP 6:
-STEP 7:
-
-
+STEP 1: Given an array list of integers [1, 1, 1, 1, 1] and a given target of 3, with a combination of symbols -, and + before the integers in the array list, the program must equal to the target, and all the possible combinations must be returned in a form of an integer.
+STEP 2: The algorithm will go through the integers within the array, assign them a symbol and keep track of the summation of the numbers to compare to the given target, as it goes one by one from left to right.
+STEP 3: Patterns include incrementing the index location and adding the pervious numbers to the upcoming numbers in a strategy method that simulates memorization.
+STEP 4/STEP 5: The program takes the array of integers and the target as main parameters, it then assigns a symbol to the numbers and adds then as it increments returning a one if the summation is equal and a 0 if it isn’t. 
+STEP 6: [1, 1, 1, 1, 1] -> 5 (ALL POSSIBLE COMBINATIONS)
+-1+1+1+1+1 = 3
++1-1+1+1+1 = 3
++1+1-1+1+1 = 3
++1+1+1-1+1 = 3
++1+1+1+1-1 = 3
+STEP 7: Failed Test Case: [1, 1, 1] given target 5, can’t be resolved cause there isn’t enough integers to add up to the value 5 with symbols – and +.
