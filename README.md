@@ -1,7 +1,11 @@
-#READMEEXAMII
+#EXAM 2 [15 LeetCode Problems]
+
 Problem 1:
+
 LONGEST PALINDROMIC SUBSTRING
+
 Given a string s, find the longest palindromic substring in s.
+
 QUESTIONS:
 Do we have a maximum length for a palindrome string?
 Do I have to answer the problem in a specific time complexity?
@@ -24,8 +28,11 @@ STEP 6: Test Cases s = “bntyuouyhgj” -> “yuouy” [sub palindrome]
 STEP 7: Failed Test Cases: “hkashxxabaxxh” -> not the same length of characters on both ends 
 
 Problem 2:
+
 CONTAINER WITH MOST WATER
+
 Given n integers a1, a2, ..., an, where each represents a point at coordinate (i, ai). n vertical lines are drawn such that the two endpoints of line i is at (i, ai) and (i, 0). Find two lines, which together with x-axis forms a container, such that the container contains the most water.
+
 QUESTIONS:
 Can we assume there are negative/positive integers?
 Can we assume the vertical lines are represented by an array of integers?
@@ -47,8 +54,11 @@ STEP 6: Test Cases: [1, 3, 2, 6] -> (3 - 6 = 3) -> (3 x 3 = 9)
 STEP 7: Failed Test Case: non-valid array of integers
 
 Problem 3:
+
 GENERATE PARANTHESIS
+
 Given n pairs of parentheses, write a function to generate all combinations of parentheses.
+
 QUESTIONS:
 Do the combinations of parenthesis have to be valid “( )”? or can the also be “) (”?
 
@@ -67,8 +77,11 @@ STEP 6: Test Case: [(((())))], [()()()()], [(())(())]
 STEP 7: Failed Test Case: [()))))(], [)()()(((]
 
 Problem 4:
+
 MINIMUM PATH SUM
+
 Given a grid filled with numbers, find a path from top left to bottom right which minimizes the sum of all numbers along its path.
+
 QUESTIONS:
 Can we assume the numbers are non-negative integers?
 Can I move diagonally to scan the numbers or just up and down?
@@ -89,8 +102,11 @@ STEP 6: Test Case: Path 1 -> 3 -> 1 -> 1 -> 1
 STEP 7: Failed Test Case: Can’t be diagonal
 
 Problem 5:
+
 FIND PEAK ELEMENT
+
 A peak element is an element that is greater than its neighbors. Given an input array nums, where nums[i] ≠ nums[i+1], find a peak element and return its index. 
+
 QUESTIONS:
 What if there are multiple peeks within the array of numbers?
 If the number after the previous number are equal, do we consider the list of numbers?
@@ -110,8 +126,11 @@ STEP 6: Test Case: [4, 7, 3, 1, 3, 2] -> [7, 3]
 STEP 7: Failed Test Case: [1, 1, 1, 1] -> 0
 
 Problem 6:
+
 LARGEST NUMBER
+
 Given a list of integers, arrange them such that they form the largest number.
+
 QUESTIONS:
 Do the integers consist of positive and/or negative integers?
 Can the integers be more than single digits, and if so, could we rearrange the order of them?
@@ -131,8 +150,11 @@ STEP 6: Test Case: [8, 43, 5, 9] -> “98543”
 STEP 7: Failed Test Case: Invalid array of integers
 
 Problem 7:
+
 LONGEST SUBSTRING WITHOUT REPEATING CHARACTERS
+
 Given a string, find the length of the longest substring without repeating characters.
+
 QUESTIONS:
 Is there a maximum number limit to how long the string can be?
 What happens if the substring has only one character repeated multiple times?
@@ -152,8 +174,11 @@ STEP 6: Test Case: “wweebubeeddc” -> “ebu” -> 3
 STEP 7: Failed Test Case: “wweebbccuu” -> “w” -> 1
 
 Problem 8:
+
 FIND FIRST AND LAST POSITION OF ELEMENT IN SORTED ARRAY
+
 Given an array of integers nums sorted in ascending order, find the starting and ending position of a given target value.
+
 QUESTIONS:
 If given target is not found, should the program return a specific value?
 Does the problem have to run in a specific time complexity?
@@ -173,8 +198,11 @@ STEP 6: Test Case: [1, 3, 5, 5, 8, 9] -> [2, 3]
 STEP 7: Failed Test Case: [1, 2, 5, 8, 9] -> ERROR
 
 Problem 9:
+
 FIND THE DUPLICATE NUMBER
+
 Given an array nums containing n + 1 integers where each integer is between 1 and n (inclusive), prove that at least one duplicate number must exist. 
+
 QUESTIONS:
 Can there be more than one duplicate number?
 Is there a specific time complexity the program should run under? 
@@ -195,8 +223,11 @@ STEP 6: Test Case: [3, 5, 7, 3, 2] -> [2, 3, 3, 5, 7] -> 3
 STEP 7: Failed Test Case: [1, 0, 4, 6, 3] -> [0, 1, 3, 4, 6] -> No duplicate
 
 Problem 10:
+
 REMOVE Nth NODE FROM THE END OF LIST
+
 Given a linked list, remove the nth node from the end of list and return its head.
+
 QUESTIONS:
 Will the given value of the n node always be valid?
 Is there a maximum number of nodes in the given linked list?
@@ -216,8 +247,11 @@ STEP 6: Test Case: 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6 -> null [TARGET : 3] 0 -> 1 -
 STEP 7: Failed Test Case: A linked list of multiple lists combined
 
 Problem 11:
+
 BINARY TREE INORDER TRAVERSAL
+
 Given a binary tree, return the inorder traversal of its nodes' values.
+
 QUESTIONS:
 Is the given tree sorted a specific way? 
 Is there a specific time complexity the algorithm must follow?
@@ -237,7 +271,9 @@ STEP 6: Test Case: [3, 5, 7, 2] ORIGINAL -> [5, 3, 7, 2] TRAVERSAL
 STEP 7: Failed Test Case:  [null] -> poor test case doesn’t allow us to check the correct format
 
 Problem 12:
+
 SHUFFLE AN ARRAY
+
 QUESTIONS:
 Is there a specific order the array should be shuffled into?
 Is there a specific time complexity the algorithm should implement?
@@ -257,8 +293,11 @@ STEP 6: Test Case: [5, 7, 1, 3, 9] -> [7, 9, 3 ,1, 5]
 STEP 7: Failed Test Case: [5, 5, 5, 5, 5] This case doesn’t allow the programmer to see the shuffle since all the numbers are the same.
 
 Problem 13:
+
 TARGET SUM
+
 You are given a list of integers, a1, a2, ..., an, and a target, S. Now you have 2 symbols + and -. Find out how many ways to assign symbols to make sum of integers equal to target S.
+
 QUESTIONS:
 Are the integers given non-negative?
 Does every integer need to have either a positive or negative sign?
@@ -281,3 +320,52 @@ STEP 6: [1, 1, 1, 1, 1] -> 5 (ALL POSSIBLE COMBINATIONS)
 +1+1+1-1+1 = 3
 +1+1+1+1-1 = 3
 STEP 7: Failed Test Case: [1, 1, 1] given target 5, can’t be resolved cause there isn’t enough integers to add up to the value 5 with symbols – and +.
+
+Problem 14:
+
+LINKED LIST COMPONENTS
+
+We are given the head node of a linked list containing unique integer values, we are also given the list G, a subset of the values in the linked list. Return the number of connected components in G, where two values are connected if they appear consecutively in the linked list.
+
+QUESTIONS:
+Should the algorithm consider a long linked list?
+Will the given G list always be a subset of the linked list?
+
+I:	The identified problem is that an algorithm must check whether a given list of integers resides within the list components, the proceed to return those nodes which are detected to be connected if they are consecutively ordered in the linked list.	
+D:	The goal would be to have a well-constructed program that would identify all the consecutive linked list components in the array that are connected in accordance to the given list of integers.
+E: 	A possible strategy would be to create a dummy head that would iterate through the original linked list comparing the components to the values of the given array list of integers.
+A:	This is a simpler solution approach that might be slower in complexity time as we are creating extra steps, such as the dummy head, to scan the original values and the compare them to the array list.
+L:	A common pattern seen when scanning a problem linearly usually includes targeting the data from both side with two pointers, or in this case creating dummy variables to carry the operations into the original linked list.
+
+DUKES -7- STEPS:
+STEP 1: Given the linked list 0 -> 1 -> 2 -> 3 and the target integer array [0, 1, 3], the algorithm must scan the linked list components in comparison to the target integer array values and return the number of consecutively connected nodes.
+STEP 2: 
+STEP 3: The pattern used in the algorithm to scan the linked list is the method of creating a dummy variable to scan the original array list and carry the set operations of comparing and returning the number of consecutively connected nodes. 
+STEP 4/STEP 5: The program takes the linked list and the target array of integers as main parameters, then it initializes a dummy node that will be connected to the original head. The dummy node will iterate through the original linked list and check if the values within the linked list coincide with those of the target numbers and return the linked nodes.
+STEP 6: Test Case: 0 -> 1 -> 2 -> 3 -> 4 -> 5 -> 6	TARGET = [2, 3, 0, 4, 5]		OUTPUT: 2
+STEP 7: Failed Test Case: 0 -> 1 -> 2 -> 3		TARGET = [6, 3, 0, 4]		OUTPUT: 0
+
+Problem 15:
+
+ADD ONE ROW TO TREE
+
+Given the root of a binary tree, then value v and depth d, you need to add a row of nodes with value v at the given depth d. The root node is at depth 1.
+
+QUESTIONS:
+Will the given depth be a positive integer?
+Does the algorithm need to implement the given variable to the depth of the tree on both the left and right subtrees? 
+What is the depth of the tree root node?
+
+I:	The identified problem needs an algorithm to search a tree for depth and insert a given variable into the specified depth target on both sides of the tree.
+D:	The identified goal is to create an algorithm that will pair well with the structure of the tree, and so the best approach is to create a recursive pattern that will move from left to right and take all aspects of the tree into consideration.
+E: 	An approach could be that to create a method that will insert the value into the target area in the target depth on both sides, and this method would be called out by the main method that will contain a helper calling the recursive methods.
+A:	A case that should be taken in consideration is that the value can be negative, and the algorithm will still insert the value at the given depth but if the given depth is less than one, the program won’t take it as a valid depth as it is outside of the tree.
+L:	Recursive methods are tree friendly and if one is given a question about trees the simplest approach should be to implement recursive methods as the time complexities will mostly be decent.
+
+DUKES -7- STEPS:
+STEP 1: Given tree [3, 2, 1, 4, 5, 6, null] in the format of right, root, left there is a given value and a depth at which the value will be added into both side on the tree (right and left).
+STEP 2: The program will include an algorithm which will insert the value node into the given depth at both end of the tree both the left and right subtree.
+STEP 3: The patter that the algorithm uses is that of a recursive scan through the tree to find the given depth and insert the given value to the tree.
+STEP 4/STEP 5: The program will take a node, the value, and depth as the main parameters, and within the methods the depth is initializes to 1 and it will recursively scan the tree incrementing the depth until it makes the given depth target and then insert the value given on both the (node.right) and (node.left) aligned on the same row (depth).
+STEP 6: Test Case: [3, 2, 1, 4, 5, 6, null]		TARGET = [{v = 1}, {d = 2}]	[3, 2, 1, 4, null, 1, 5, 6]
+STEP 7: Failed Test Case: [3, 2, 1, 4, null]		TARGET = [{v = 2}, {d = -2}]	The given depth is invalid as the trees root is initialized at depth 1 and it cannot go any further back into the negatives.
